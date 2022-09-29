@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="starting-up" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<title>New Tab</title>
+<!-- Don't scale the viewport in either portrait or landscape mode.
+     Note that this means apps will be reflowed when rotated (like iPad).
+     If we wanted to maintain position we could remove 'maximum-scale' so
+     that we'd zoom out in portrait mode, but then there would be a bunch
+     of unusable space at the bottom.
+-->
+<meta name="viewport"
+      content="user-scalable=no, width=device-width, maximum-scale=1.0">
+
+<link id="themecss" rel="stylesheet">
+<script>
+// Until themes can clear the cache, force-reload the theme stylesheet.
+document.getElementById('themecss').href = 'chrome://theme/css/new_tab_theme.css?' + Date.now();
+</script>
+<link rel="stylesheet" href="chrome://resources/css/text_defaults.css">
+<link rel="stylesheet" href="chrome://resources/css/menu.css">
+<link rel="stylesheet" href="chrome://resources/css/menu_button.css">
+<link rel="stylesheet" href="chrome://resources/css/widgets.css">
+<link rel="stylesheet" href="apps_page.css">
+<link rel="stylesheet" href="nav_dot.css">
+<link rel="stylesheet" href="new_tab.css">
+<link rel="stylesheet" href="tile_page.css">
+<link rel="stylesheet" href="trash.css">
+
+<script type="module" src="new_tab.js"></script>
+</head>
